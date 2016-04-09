@@ -4,7 +4,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="amuse"
+ZSH_THEME="clean"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -46,7 +46,8 @@ unsetopt correct_all
 unsetopt correct
 
 # Customize to your needs...
-export EDITOR=nano
+
+# kdiff3
 export PATH=/Applications/kdiff3.app/Contents/MacOS:$PATH
 
 ### Added by the Heroku Toolbelt
@@ -70,11 +71,19 @@ alias gcap!="git commit --all --amend --reuse-message HEAD && git push -f"
 alias gfhrm="git fetch origin && git reset --hard origin/master"
 alias upplib="(bundle update plib --source plib > /dev/null && gca -m 'updated plib') || true"
 
+command_exists () {
+    type "$1" &> /dev/null ;
+}
+
 export LC_CTYPE="zh_CN.UTF-8"
 
+
 export NVM_DIR=~/.nvm
-. $(brew --prefix nvm)/nvm.sh
+
+if command_exists brew
+then
+	. $(brew --prefix nvm)/nvm.sh
+fi
 
 
-#source localsquid
 

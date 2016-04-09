@@ -1,0 +1,20 @@
+
+if [ ! -d ~/.dotfiles ]
+then
+	echo Initializing...
+	git clone git@github.com:layerssss/dotfiles.git ~/.dotfiles
+	echo Done.
+else
+	echo Updating...
+	git --work-tree ~/.dotfiles --git-dir ~/.dotfiles/.git fetch origin
+	echo Done.
+fi
+git --work-tree ~/.dotfiles --git-dir ~/.dotfiles/.git reset --hard origin/master
+
+echo Dispatching...
+rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
+	--exclude "README.md" --exclude "LICENSE.txt" -avh --no-perms ~/.dotfiles/ ~;
+echo Done.
+source ~/.zshrc
+echo Loaded.
+
