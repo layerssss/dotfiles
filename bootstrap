@@ -2,7 +2,7 @@
 if [ ! -d ~/.dotfiles ]
 then
 	echo Initializing...
-	git clone git@github.com:layerssss/dotfiles.git ~/.dotfiles
+	git clone https://github.com/layerssss/dotfiles.git ~/.dotfiles
 	echo Done.
 else
 	echo Updating...
