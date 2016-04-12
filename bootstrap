@@ -12,8 +12,8 @@ fi
 git --work-tree ~/.dotfiles --git-dir ~/.dotfiles/.git reset --hard origin/master
 
 echo Dispatching...
-rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
-	--exclude "README.md" --exclude "LICENSE.txt" -avh --no-perms ~/.dotfiles/ ~;
+rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap" \
+	--exclude "README.md" --exclude "LICENSE" -avh --no-perms ~/.dotfiles/ ~;
 echo Done.
 source ~/.zshrc
 echo Loaded.
