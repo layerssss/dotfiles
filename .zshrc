@@ -61,7 +61,7 @@ alias npm="noglob npm"
 alias bower="noglob bower"
 alias gprune="git remote prune origin && git branch -r | awk '{print \$1}' | egrep -v -f /dev/fd/0 <(git branch -vv) | awk '{print \$1}' | xargs git branch -d"
 
-export RBENV_ROOT=/usr/local/var/rbenv
+export RBENV_ROOT=~/.rbenv
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
