@@ -45,6 +45,9 @@ source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 unsetopt correct
 
+export NAME="Michael Yin"
+export EMAIL="layerssss@gmail.com"
+
 # Customize to your needs...
 
 # kdiff3
