@@ -86,3 +86,7 @@ then
 	. $(brew --prefix nvm)/nvm.sh
 fi
 
+if [ -f ~/.nvm/nvm.sh ]
+then
+  . ~/.nvm/nvm.sh
+fi
