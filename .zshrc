@@ -90,3 +90,8 @@ if [ -f ~/.nvm/nvm.sh ]
 then
   . ~/.nvm/nvm.sh
 fi
+
+if [ -f ~/.env ]
+then
+  . ~/.env
+fi
