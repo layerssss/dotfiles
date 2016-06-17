@@ -79,6 +79,10 @@ command_exists () {
     type "$1" &> /dev/null ;
 }
 
+nobodydo () {
+    sudo -u nobody $@
+}
+
 export NVM_DIR=~/.nvm
 
 if command_exists brew
