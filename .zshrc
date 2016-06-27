@@ -84,11 +84,27 @@ nobodydo () {
     sudo -u nobody $@
 }
 
+retry () {
+  while 1
+  do
+    $@
+    ret=$!
+    if [ -n $ret ]
+    then
+      echo "\"$@\" faild (returned $ret)"
+      sleep 3
+    else
+      echo "\"$@\" exited."
+      sleep 10
+    fi
+  done
+}
+
 export NVM_DIR=~/.nvm
 
 if command_exists brew
 then
-	. $(brew --prefix nvm)/nvm.sh
+  . $(brew --prefix nvm)/nvm.sh
 fi
 
 if [ -f ~/.nvm/nvm.sh ]
