@@ -47,6 +47,7 @@ unsetopt correct
 
 export NAME="Michael Yin"
 export EMAIL="layerssss@gmail.com"
+export EDITOR=vi
 
 # Customize to your needs...
 
