@@ -49,18 +49,13 @@ export NAME="Michael Yin"
 export EMAIL="layerssss@gmail.com"
 export EDITOR=vi
 
-# Customize to your needs...
-
-# kdiff3
-export PATH=/Applications/kdiff3.app/Contents/MacOS:$PATH
+mkdir -p ~/.vimswap
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
 export PATH="bin:/usr/local/opt/ruby/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
-alias sprake="spring rake"
-alias sprails="spring rails"
 alias npm="noglob npm"
 alias bower="noglob bower"
 alias gprune="git remote prune origin && git branch -r | awk '{print \$1}' | egrep -v -f /dev/fd/0 <(git branch -vv) | awk '{print \$1}' | xargs git branch -d"

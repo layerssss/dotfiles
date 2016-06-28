@@ -17,6 +17,8 @@ set shiftwidth=2
 set number
 set mouse=a
 
+set swapfile
+set dir=~/.vimswap
 
 augroup BWCCreateDir
     autocmd!
