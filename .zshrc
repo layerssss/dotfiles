@@ -42,8 +42,8 @@ ZSH_THEME="crunch"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-unsetopt correct_all
-unsetopt correct
+setopt correct_all
+setopt correct
 
 export NAME="Michael Yin"
 export EMAIL="layerssss@gmail.com"
