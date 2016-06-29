@@ -1,3 +1,41 @@
+command_exists () {
+    type "$1" &> /dev/null ;
+}
+
+nobodydo () {
+    sudo -u nobody $@
+}
+
+retry () {
+  while 1
+  do
+    $@
+    ret=$!
+    if [ -n $ret ]
+    then
+      echo "\"$@\" faild (returned $ret)"
+      sleep 3
+    else
+      echo "\"$@\" exited."
+      sleep 10
+    fi
+  done
+}
+
+try_clone() {
+  repo=$1
+  shift
+  target=$1
+  if [ ! -d $target ]
+  then
+    echo Installing $repo...
+    git clone --depth=1 $repo $target
+    echo Done.
+  fi
+}
+
+try_clone https://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load.
@@ -49,7 +87,6 @@ export NAME="Michael Yin"
 export EMAIL="layerssss@gmail.com"
 export EDITOR=vi
 
-mkdir -p ~/.vimswap
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -71,30 +108,6 @@ alias gcap!="git commit --all --amend --reuse-message HEAD && git push -f"
 alias gfhrm="git fetch origin && git reset --hard origin/master"
 alias upplib="(bundle update plib --source plib > /dev/null && gca -m 'updated plib') || true"
 
-command_exists () {
-    type "$1" &> /dev/null ;
-}
-
-nobodydo () {
-    sudo -u nobody $@
-}
-
-retry () {
-  while 1
-  do
-    $@
-    ret=$!
-    if [ -n $ret ]
-    then
-      echo "\"$@\" faild (returned $ret)"
-      sleep 3
-    else
-      echo "\"$@\" exited."
-      sleep 10
-    fi
-  done
-}
-
 export NVM_DIR=~/.nvm
 
 if command_exists brew
@@ -110,4 +123,16 @@ fi
 if [ -f ~/.env ]
 then
   . ~/.env
+fi
+
+mkdir -p ~/.vimswap
+try_clone https://github.com/wincent/command-t ~/.vim/bundle/command-t
+
+if [ ! -f ~/.vim/bundle/command-t/ruby/command-t/ext.so ]
+then
+  echo "
+  cd ~/.vim/bundle/command-t/ruby/command-t
+  RBENV_VERSION=system rbenv exec ruby extconf.rb
+  make
+  " | zsh
 fi
