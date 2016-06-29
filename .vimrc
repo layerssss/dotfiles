@@ -21,8 +21,14 @@ set swapfile
 set dir=~/.vimswap
 
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
-
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+" set vim to chdir for each file
+if exists('+autochdir')
+  set autochdir
+else
+  autocmd BufEnter * silent! lcd %:p:h:gs/ /\\ /
+endif
 
 augroup BWCCreateDir
     autocmd!
