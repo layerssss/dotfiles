@@ -20,6 +20,8 @@ set mouse=a
 set swapfile
 set dir=~/.vimswap
 
+set spell spelllang=en_us
+
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
