@@ -31,12 +31,13 @@ windows:
   - prax:
       layout: main-vertical
       panes:
-        - prax start --verbose
-        - tail -f ~/.prax/_logs/*
-        - tunnels 20558 20559
-        - nobodydo nodejs nodesnippets/browse 2000 ~
+        - retry prax start --verbose
+        - retry tail -f ~/.prax/_logs/*
+        - retry tunnels 20558 20559
+        - retry nobodydo nodejs nodesnippets/browse 2000 ~
   - dropbox:
       layout: main-vertical
       panes:
-        - ~/.dropbox-dist/dropboxd
-        - watch --interval 5 --no-title ~/dropbox.py filestatus ~/Dropbox/*  
+        - retry ~/.dropbox-dist/dropboxd
+        - retry ~/dropbox.py filestatus ~/Dropbox/*  
+  - dotfiles: cd ~/.dotfiles && retry vim .

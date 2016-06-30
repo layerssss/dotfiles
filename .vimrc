@@ -26,12 +26,6 @@ set nospell
 
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 
-if exists('+autochdir')
-  set autochdir
-else
-  autocmd BufEnter * silent! lcd %:p:h:gs/ /\\ /
-endif
-
 augroup BWCCreateDir
     autocmd!
     autocmd BufWritePre * if expand("<afile>")!~#'^\w\+:/' && !isdirectory(expand("%:h")) | execute "silent! !mkdir -p ".shellescape(expand('%:h'), 1) | redraw! | endif
