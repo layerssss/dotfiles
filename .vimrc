@@ -1,12 +1,13 @@
 set nocompatible
 
-" Dvorak remap
-" 1 - Movement keys htns -> hjkl
-"   (gj and gk move by visual lines, if the line is wrapped for instance)
-noremap h h
-noremap t gj
-noremap n gk
-noremap s l
+noremap h <NOP>
+noremap j <NOP>
+noremap k <NOP>
+noremap l <NOP>
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
 
 let mapleader= ","
 syntax on
