@@ -80,8 +80,6 @@ ZSH_THEME="crunch"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-setopt correct_all
-setopt correct
 
 export NAME="Michael Yin"
 export EMAIL="layerssss@gmail.com"
