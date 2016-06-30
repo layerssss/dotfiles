@@ -7,11 +7,11 @@ nobodydo () {
 }
 
 retry () {
-  while 1
+  while true
   do
     $@
     ret=$!
-    if [ -n $ret ]
+    if [ $ret -ne 0 ]
     then
       echo "\"$@\" faild (returned $ret)"
       sleep 3
