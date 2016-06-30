@@ -20,6 +20,7 @@ set shiftwidth=2
 
 set number
 set mouse=a
+set showcmd
 
 set swapfile
 set dir=~/.vimswap
