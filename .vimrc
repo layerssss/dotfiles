@@ -24,6 +24,8 @@ set dir=~/.vimswap
 set spell spelllang=en_us
 set nospell
 
+autocmd BufWritePre *.pl %s/\s\+$//e
+
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 
 augroup BWCCreateDir
