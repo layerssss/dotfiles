@@ -127,8 +127,7 @@ fi
 
 mkdir -p ~/.vimswap
 try_clone https://github.com/wincent/command-t ~/.vim/bundle/command-t
-
-if [ ! -f ~/.vim/bundle/command-t/ruby/command-t/ext.so ]
+if [ ! -f ~/.vim/bundle/command-t/ruby/command-t/ext.o ]
 then
   echo "
   cd ~/.vim/bundle/command-t/ruby/command-t
@@ -136,3 +135,5 @@ then
   make
   " | zsh
 fi
+try_clone https://github.com/kchmck/vim-coffee-script.git ~/.vim/bundle/vim-coffee-script/
+
