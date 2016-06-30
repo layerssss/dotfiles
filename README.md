@@ -13,10 +13,6 @@ brew install zsh tmux vim git nvm rbenv ruby-build node pow
 apt-get install rbenv zsh tmux vim-nox git node
 ```
 
-# oh-my-zsh
-
-https://github.com/robbyrussell/oh-my-zsh
-
 # bootstrap
 
 ```
