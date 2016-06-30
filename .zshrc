@@ -135,5 +135,4 @@ then
   make
   " | zsh
 fi
-try_clone https://github.com/kchmck/vim-coffee-script.git ~/.vim/bundle/vim-coffee-script/
 

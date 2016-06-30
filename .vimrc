@@ -42,4 +42,3 @@ augroup BWCCreateDir
 augroup END
 
 set rtp+=~/.vim/bundle/command-t
-set rtp+=~/.vim/bundle/vim-coffee-script
