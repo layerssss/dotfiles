@@ -91,7 +91,7 @@ export EDITOR=vi
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-export PATH="bin:/usr/local/opt/ruby/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="/usr/local/opt/ruby/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
 alias npm="noglob npm"
 alias bower="noglob bower"
@@ -125,6 +125,7 @@ then
   . ~/.env
 fi
 
+
 mkdir -p ~/.vimswap
 try_clone https://github.com/wincent/command-t ~/.vim/bundle/command-t
 if [ ! -f ~/.vim/bundle/command-t/ruby/command-t/ext.o ]
@@ -136,3 +137,4 @@ then
   " | zsh
 fi
 
+export PATH="bin:$PATH"
