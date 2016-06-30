@@ -10,7 +10,7 @@ brew install zsh tmux vim git nvm rbenv ruby-build node pow
 # binaries for ubuntu
 
 ```
-apt-get install rbenv zsh tmux vim-nox git node
+apt-get install rbenv zsh tmux vim-nox git node build-essential
 ```
 
 # bootstrap
