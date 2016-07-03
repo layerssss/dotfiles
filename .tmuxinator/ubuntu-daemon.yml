@@ -33,7 +33,7 @@ windows:
       panes:
         - retry prax start --verbose
         - retry tail -f ~/.prax/_logs/*
-        - retry tunnels 20558 20559
+        - retry devhttps 20558 20559
         - retry nobodydo nodejs nodesnippets/browse 2000 ~
   - dropbox:
       layout: main-vertical
