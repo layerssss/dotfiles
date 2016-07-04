@@ -17,7 +17,7 @@ retry () {
       sleep 3
     else
       echo "\"$@\" exited."
-      sleep 10
+      sleep 0.5
     fi
   done
 }
