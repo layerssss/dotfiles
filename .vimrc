@@ -14,6 +14,7 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set scrolloff=20
+autocmd BufEnter * if expand("%:p:h") !~ '/.git$' | silent! lcd %:p:h | endif
 
 set number
 set mouse=a
