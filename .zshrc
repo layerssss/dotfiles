@@ -34,6 +34,12 @@ try_clone() {
   fi
 }
 
+function join() {
+	local IFS=$1
+	shift
+	echo "$*"
+}
+
 try_clone https://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
 
 # Path to your oh-my-zsh configuration.
@@ -85,6 +91,7 @@ export NAME="Michael Yin"
 export EMAIL="layerssss@gmail.com"
 export EDITOR=vi
 export PATH=~/.bin:$PATH
+export PATH=$(join ':' ~/.bins/*):$PATH
 
 
 ### Added by the Heroku Toolbelt
