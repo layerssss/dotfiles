@@ -14,6 +14,8 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set scrolloff=20
+set spell spelllang=en_nz
+set nospell
 
 set number
 set mouse=a
