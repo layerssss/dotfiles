@@ -39,5 +39,5 @@ windows:
       layout: main-vertical
       panes:
         - retry ~/.dropbox-dist/dropboxd
-        - watch --interval 5 --no-title  ~/dropbox.py filestatus ~/Dropbox/*  
+        - watch --interval 5 --no-title  ~/dropbox.py filestatus ~/Dropbox/\*
   - dotfiles: cd ~/.dotfiles && retry vim .
