@@ -29,6 +29,8 @@ set nospell
 
 autocmd BufWritePre *.pl %s/\s\+$//e
 
+autocmd BufNewFile,BufRead *.iced set filetype=coffee
+
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 
 augroup BWCCreateDir
