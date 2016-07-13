@@ -53,10 +53,11 @@ autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
 set rtp+=~/.vim/bundle/typescript-vim
+autocmd BufNewFile,BufRead *.ts,*.tsx setlocal filetype=typescript
 set rtp+=~/.vim/bundle/vimproc.vim
 set rtp+=~/.vim/bundle/tsuquyomi
 set rtp+=~/.vim/bundle/vim-autoformat
 
 noremap <Leader>f :Autoformat<CR>
 
-autocmd BufNewFile,BufRead *.ts,*.tsx setlocal filetype=typescript
+set rtp+=~/.vim/bundle/vim-js-pretty-template
