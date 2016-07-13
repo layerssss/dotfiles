@@ -143,6 +143,7 @@ then
   make
   " | zsh
 fi
+try_clone git@github.com:octref/RootIgnore.git ~/.vim/bundle/RootIgnore
 
 try_clone https://github.com/leafgarland/typescript-vim.git ~/.vim/bundle/typescript-vim
 try_clone https://github.com/Shougo/vimproc.vim.git ~/.vim/bundle/vimproc.vim
