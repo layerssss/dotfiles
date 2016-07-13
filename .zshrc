@@ -144,4 +144,17 @@ then
   " | zsh
 fi
 
+try_clone https://github.com/leafgarland/typescript-vim.git ~/.vim/bundle/typescript-vim
+try_clone https://github.com/Shougo/vimproc.vim.git ~/.vim/bundle/vimproc.vim
+vimproc_libs=`ls ~/.vim/bundle/vimproc.vim/lib | grep vimproc | grep .so`
+if [ -z $vimproc_libs ]
+then
+  echo "
+  cd ~/.vim/bundle/vimproc.vim
+  make
+  " | zsh
+fi
+  
+try_clone https://github.com/Quramy/tsuquyomi.git ~/.vim/bundle/tsuquyomi
+
 export PATH="bin:$PATH"

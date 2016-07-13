@@ -49,3 +49,9 @@ autocmd FileType jsx noremap <buffer> <c-f> :call JsxBeautify()<cr>
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 " for css or scss
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+
+set rtp+=~/.vim/bundle/typescript-vim
+set rtp+=~/.vim/bundle/vimproc.vim
+set rtp+=~/.vim/bundle/tsuquyomi
+
+autocmd BufNewFile,BufRead *.ts,*.tsx setlocal filetype=typescript
