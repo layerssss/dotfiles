@@ -55,5 +55,8 @@ autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 set rtp+=~/.vim/bundle/typescript-vim
 set rtp+=~/.vim/bundle/vimproc.vim
 set rtp+=~/.vim/bundle/tsuquyomi
+set rtp+=~/.vim/bundle/vim-autoformat
+
+noremap <Leader>f :Autoformat<CR>
 
 autocmd BufNewFile,BufRead *.ts,*.tsx setlocal filetype=typescript
