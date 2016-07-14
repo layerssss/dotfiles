@@ -62,3 +62,7 @@ noremap <Leader>f :Autoformat<CR>
 
 set rtp+=~/.vim/bundle/vim-js-pretty-template
 set rtp+=~/.vim/bundle/emmet-vim
+
+set rtp+=~/.vim/bundle/vim-less
+set rtp+=~/.vim/bundle/vim-css-color
+set rtp+=~/.vim/bundle/vim-css3-syntax

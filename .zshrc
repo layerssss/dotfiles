@@ -160,5 +160,8 @@ try_clone https://github.com/Quramy/tsuquyomi.git ~/.vim/bundle/tsuquyomi
 try_clone git@github.com:Chiel92/vim-autoformat.git ~/.vim/bundle/vim-autoformat
 try_clone https://github.com/Quramy/vim-js-pretty-template ~/.vim/bundle/vim-js-pretty-template
 try_clone https://github.com/mattn/emmet-vim.git ~/.vim/bundle/emmet-vim
+try_clone https://github.com/groenewege/vim-less.git ~/.vim/bundle/vim-less
+try_clone https://github.com/skammer/vim-css-color.git ~/.vim/bundle/vim-css-color
+try_clone https://github.com/hail2u/vim-css3-syntax.git ~/.vim/bundle/vim-css3-syntax
 
 export PATH="bin:$PATH"
