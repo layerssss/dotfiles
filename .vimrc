@@ -61,3 +61,4 @@ set rtp+=~/.vim/bundle/vim-autoformat
 noremap <Leader>f :Autoformat<CR>
 
 set rtp+=~/.vim/bundle/vim-js-pretty-template
+set rtp+=~/.vim/bundle/emmet-vim
