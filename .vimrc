@@ -27,6 +27,8 @@ set dir=~/.vimswap
 set spell spelllang=en_us
 set nospell
 
+set showmatch
+
 autocmd BufWritePre *.pl %s/\s\+$//e
 
 autocmd BufNewFile,BufRead *.iced set filetype=coffee
