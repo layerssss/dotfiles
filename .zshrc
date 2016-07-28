@@ -163,5 +163,6 @@ try_clone https://github.com/mattn/emmet-vim.git ~/.vim/bundle/emmet-vim
 try_clone https://github.com/groenewege/vim-less.git ~/.vim/bundle/vim-less
 try_clone https://github.com/skammer/vim-css-color.git ~/.vim/bundle/vim-css-color
 try_clone https://github.com/hail2u/vim-css3-syntax.git ~/.vim/bundle/vim-css3-syntax
+try_clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 
 export PATH="bin:$PATH"
