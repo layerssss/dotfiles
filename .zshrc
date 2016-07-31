@@ -90,7 +90,7 @@ source $ZSH/oh-my-zsh.sh
 
 export NAME="Michael Yin"
 export EMAIL="layerssss@gmail.com"
-export EDITOR=vi
+export EDITOR=vim
 export PATH=~/.bin:$PATH
 export PATH=$(join ':' ~/.bins/*):$PATH
 
