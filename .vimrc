@@ -76,4 +76,5 @@ set rtp+=~/.vim/bundle/nerdtree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
-
+set rtp+=~/.vim/bundle/vim-rubocop
+noremap <Leader>r :RuboCop<CR>
