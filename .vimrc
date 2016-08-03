@@ -70,11 +70,20 @@ set rtp+=~/.vim/bundle/emmet-vim
 set rtp+=~/.vim/bundle/vim-less
 set rtp+=~/.vim/bundle/vim-css-color
 set rtp+=~/.vim/bundle/vim-css3-syntax
+
 set rtp+=~/.vim/bundle/nerdtree
 " How can I open a NERDTree automatically when vim starts up if no files were
 " specified?
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
+
 set rtp+=~/.vim/bundle/vim-rubocop
 noremap <Leader>r :RuboCop<CR>
+
+set rtp+=~/.vim/bundle/syntastic
+"Rubocop
+let g:syntastic_ruby_checkers          = ['rubocop', 'mri']
+let g:syntastic_ruby_rubocop_exec      = '`which rubocop`'
+"for haml
+let g:syntastic_haml_checkers = ['haml_lint']

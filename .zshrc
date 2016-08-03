@@ -165,5 +165,6 @@ try_clone https://github.com/skammer/vim-css-color.git ~/.vim/bundle/vim-css-col
 try_clone https://github.com/hail2u/vim-css3-syntax.git ~/.vim/bundle/vim-css3-syntax
 try_clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 try_clone https://github.com/ngmy/vim-rubocop.git ~/.vim/bundle/vim-rubocop
+try_clone https://github.com/scrooloose/syntastic.git ~/.vim/bundle/syntastic
 
 export PATH="bin:$PATH"
