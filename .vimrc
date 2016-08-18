@@ -45,6 +45,7 @@ augroup END
 set rtp+=~/.vim/bundle/command-t
 set rtp+=~/.vim/bundle/RootIgnore
 let g:CommandTTraverseSCM = 'pwd'
+noremap <Leader>l :CommandTLine<CR>
 
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 " for json
