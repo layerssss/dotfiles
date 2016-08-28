@@ -89,8 +89,6 @@ plugins=(git rails ruby bundler)
 source $ZSH/oh-my-zsh.sh
 
 export EDITOR=vim
-export PATH=~/.bin:$PATH
-export PATH=$(join ':' ~/.bins/*):$PATH
 
 
 ### Added by the Heroku Toolbelt
@@ -165,4 +163,6 @@ try_clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 try_clone https://github.com/ngmy/vim-rubocop.git ~/.vim/bundle/vim-rubocop
 try_clone https://github.com/scrooloose/syntastic.git ~/.vim/bundle/syntastic
 
+export PATH=$(join ':' ~/.bins/*):$PATH
+export PATH=~/.bin:$PATH
 export PATH="bin:$PATH"
