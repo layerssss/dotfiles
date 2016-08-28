@@ -84,3 +84,5 @@ let g:syntastic_ruby_checkers          = ['rubocop', 'mri']
 let g:syntastic_ruby_rubocop_exec      = '`which rubocop`'
 "for haml
 let g:syntastic_haml_checkers = ['haml_lint']
+
+set rtp+=~/.vim/bundle/vim-sleuth

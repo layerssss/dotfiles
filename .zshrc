@@ -153,7 +153,7 @@ then
 fi
   
 try_clone https://github.com/Quramy/tsuquyomi.git ~/.vim/bundle/tsuquyomi
-try_clone git@github.com:Chiel92/vim-autoformat.git ~/.vim/bundle/vim-autoformat
+try_clone https://github.com/Chiel92/vim-autoformat.git ~/.vim/bundle/vim-autoformat
 try_clone https://github.com/Quramy/vim-js-pretty-template ~/.vim/bundle/vim-js-pretty-template
 try_clone https://github.com/mattn/emmet-vim.git ~/.vim/bundle/emmet-vim
 try_clone https://github.com/groenewege/vim-less.git ~/.vim/bundle/vim-less
@@ -162,6 +162,7 @@ try_clone https://github.com/hail2u/vim-css3-syntax.git ~/.vim/bundle/vim-css3-s
 try_clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 try_clone https://github.com/ngmy/vim-rubocop.git ~/.vim/bundle/vim-rubocop
 try_clone https://github.com/scrooloose/syntastic.git ~/.vim/bundle/syntastic
+try_clone https://github.com/tpope/vim-sleuth.git ~/.vim/bundle/vim-sleuth
 
 export PATH=$(join ':' ~/.bins/*):$PATH
 export PATH=~/.bin:$PATH
