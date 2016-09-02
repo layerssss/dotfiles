@@ -164,6 +164,9 @@ try_clone https://github.com/ngmy/vim-rubocop.git ~/.vim/bundle/vim-rubocop
 try_clone https://github.com/scrooloose/syntastic.git ~/.vim/bundle/syntastic
 try_clone https://github.com/tpope/vim-sleuth.git ~/.vim/bundle/vim-sleuth
 
+chmod 0600 ~/.ssh/*
+chmod 0600 ~/.netrc
+
 export PATH=$(join ':' ~/.bins/*):$PATH
 export PATH=~/.bin:$PATH
 export PATH="bin:$PATH"
