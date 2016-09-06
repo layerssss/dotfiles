@@ -167,6 +167,10 @@ try_clone https://github.com/tpope/vim-sleuth.git ~/.vim/bundle/vim-sleuth
 chmod 0600 ~/.ssh/*
 chmod 0600 ~/.netrc
 
-export PATH=$(join ':' ~/.bins/*):$PATH
-export PATH=~/.bin:$PATH
-export PATH="bin:$PATH"
+export PLATFORM=$(uname -s)
+export PLATFORM=$PLATFORM:l
+
+export PATH=$(join ':' ~/.bins.${PLATFORM}/*):$(join ':' ~/.bins/*):$PATH
+export PATH=~/.bin.${PLATFORM}:~/.bin:$PATH
+export PATH="bin.${PLATFORM}:bin:$PATH"
+
