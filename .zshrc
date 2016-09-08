@@ -164,11 +164,11 @@ try_clone https://github.com/ngmy/vim-rubocop.git ~/.vim/bundle/vim-rubocop
 try_clone https://github.com/scrooloose/syntastic.git ~/.vim/bundle/syntastic
 try_clone https://github.com/tpope/vim-sleuth.git ~/.vim/bundle/vim-sleuth
 
-chmod 0600 ~/.ssh/*
-chmod 0600 ~/.netrc
-
 export PLATFORM=$(uname -s)
 export PLATFORM=$PLATFORM:l
+
+find ~/Dropbox/credentials -type f -exec chmod 0600 {} \;
+chmod 0755 ~/.bins/dropbox/* ~/.bins.${PLATFORM}/dropbox/*
 
 export PATH=$(join ':' ~/.bins.${PLATFORM}/*):$(join ':' ~/.bins/*):$PATH
 export PATH=~/.bin.${PLATFORM}:~/.bin:$PATH
