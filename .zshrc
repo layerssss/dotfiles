@@ -174,3 +174,5 @@ export PATH=$(join ':' ~/.bins.${PLATFORM}/*):$(join ':' ~/.bins/*):$PATH
 export PATH=~/.bin.${PLATFORM}:~/.bin:$PATH
 export PATH="bin.${PLATFORM}:bin:$PATH"
 
+
+export BUNDLE_JOBS=$(getconf _NPROCESSORS_ONLN)
