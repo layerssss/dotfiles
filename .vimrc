@@ -86,3 +86,12 @@ let g:syntastic_ruby_rubocop_exec      = '`which rubocop`'
 let g:syntastic_haml_checkers = ['haml_lint']
 
 set rtp+=~/.vim/bundle/vim-sleuth
+
+set rtp+=~/.vim/bundle/neocomplete
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+

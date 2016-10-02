@@ -2,7 +2,6 @@ setopt null_glob
 command_exists () {
     type "$1" &> /dev/null ;
 }
-
 nobodydo () {
     sudo -u nobody $@
 }
@@ -163,6 +162,7 @@ try_clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 try_clone https://github.com/ngmy/vim-rubocop.git ~/.vim/bundle/vim-rubocop
 try_clone https://github.com/scrooloose/syntastic.git ~/.vim/bundle/syntastic
 try_clone https://github.com/tpope/vim-sleuth.git ~/.vim/bundle/vim-sleuth
+try_clone https://github.com/Shougo/neocomplete.vim.git ~/.vim/bundle/neocomplete
 
 export PLATFORM=$(uname -s)
 export PLATFORM=$PLATFORM:l
