@@ -95,3 +95,4 @@ let g:neocomplete#enable_at_startup = 1
 " Use smartcase.
 let g:neocomplete#enable_smart_case = 1
 
+set rtp+=~/.vim/bundle/vim-fugitive
