@@ -96,3 +96,4 @@ let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
 
 set rtp+=~/.vim/bundle/vim-fugitive
+set rtp+=~/.vim/bundle/vim-coffee-script
