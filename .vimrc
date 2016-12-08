@@ -1,4 +1,5 @@
 set nocompatible
+set backupcopy=yes
 
 noremap <Up> <NOP>
 noremap <Down> <NOP>
