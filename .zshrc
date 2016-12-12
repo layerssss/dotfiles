@@ -170,6 +170,8 @@ try_clone https://github.com/vim-scripts/confirm-quit.git ~/.vim/bundle/confirm-
 export PLATFORM=$(uname -s)
 export PLATFORM=$PLATFORM:l
 
+export PATH=~/.local/bin:$PATH
+
 find ~/Dropbox/credentials -type f -exec chmod 0600 {} \;
 chmod 0755 ~/.bins/dropbox/* ~/.bins.${PLATFORM}/dropbox/*
 
