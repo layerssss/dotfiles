@@ -165,7 +165,6 @@ try_clone https://github.com/scrooloose/syntastic.git ~/.vim/bundle/syntastic
 try_clone https://github.com/tpope/vim-sleuth.git ~/.vim/bundle/vim-sleuth
 try_clone https://github.com/Shougo/neocomplete.vim.git ~/.vim/bundle/neocomplete
 try_clone https://github.com/tpope/vim-fugitive ~/.vim/bundle/vim-fugitive
-try_clone https://github.com/vim-scripts/confirm-quit.git ~/.vim/bundle/confirm-quit
 
 export PLATFORM=$(uname -s)
 export PLATFORM=$PLATFORM:l
