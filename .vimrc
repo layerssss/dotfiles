@@ -48,16 +48,6 @@ set rtp+=~/.vim/bundle/RootIgnore
 let g:CommandTTraverseSCM = 'pwd'
 noremap <Leader>l :CommandTLine<CR>
 
-autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
-" for json
-autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
-" for jsx
-autocmd FileType jsx noremap <buffer> <c-f> :call JsxBeautify()<cr>
-" for html
-autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
-" for css or scss
-autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
-
 set rtp+=~/.vim/bundle/typescript-vim
 autocmd BufNewFile,BufRead *.ts,*.tsx setlocal filetype=typescript
 set rtp+=~/.vim/bundle/vimproc.vim
