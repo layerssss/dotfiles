@@ -4,13 +4,13 @@ Michael Yin's dotfiles
 # binaries for osx
 
 ```
-brew install zsh tmux vim git nvm rbenv ruby-build node pow
+brew install zsh tmux vim git nvm rbenv ruby-build nodejs pow
 ```
 
 # binaries for ubuntu
 
 ```
-apt-get install rbenv zsh tmux vim-nox git node build-essential
+apt-get install rbenv zsh tmux vim-nox git nodejs build-essential
 ```
 
 # bootstrap
