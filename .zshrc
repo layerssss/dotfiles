@@ -143,6 +143,14 @@ then
   make
   " | zsh
 fi
+
+if [ ! -d ~/.bin/node_modules/js-beautify ]
+then
+  echo "
+  cd ~/.bin/node_modules
+  tar -xzf js-beautify.tar.gz
+  " | zsh
+fi
   
 try_clone https://github.com/Quramy/tsuquyomi.git ~/.vim/bundle/tsuquyomi
 try_clone https://github.com/Chiel92/vim-autoformat.git ~/.vim/bundle/vim-autoformat
