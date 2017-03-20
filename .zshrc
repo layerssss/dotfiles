@@ -129,18 +129,10 @@ fi
 
 
 mkdir -p ~/.vimswap
-try_clone https://github.com/wincent/command-t ~/.vim/bundle/command-t
-if [ ! -f ~/.vim/bundle/command-t/ruby/command-t/ext.o ]
-then
-  echo "
-  cd ~/.vim/bundle/command-t/ruby/command-t
-  RBENV_VERSION=system rbenv exec ruby extconf.rb
-  make
-  " | zsh
-fi
+
+try_clone https://github.com/kien/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim
 try_clone https://github.com/octref/RootIgnore.git ~/.vim/bundle/RootIgnore
 try_clone https://github.com/kchmck/vim-coffee-script.git ~/.vim/bundle/vim-coffee-script/
-
 try_clone https://github.com/leafgarland/typescript-vim.git ~/.vim/bundle/typescript-vim
 try_clone https://github.com/Shougo/vimproc.vim.git ~/.vim/bundle/vimproc.vim
 vimproc_libs=`ls ~/.vim/bundle/vimproc.vim/lib | grep vimproc | grep .so`

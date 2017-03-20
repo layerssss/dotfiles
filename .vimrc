@@ -43,10 +43,7 @@ augroup BWCCreateDir
     autocmd BufWritePre * if expand("<afile>")!~#'^\w\+:/' && !isdirectory(expand("%:h")) | execute "silent! !mkdir -p ".shellescape(expand('%:h'), 1) | redraw! | endif
 augroup END
 
-set rtp+=~/.vim/bundle/command-t
-set rtp+=~/.vim/bundle/RootIgnore
-let g:CommandTTraverseSCM = 'pwd'
-noremap <Leader>l :CommandTLine<CR>
+set rtp+=~/.vim/bundle/ctrlp.vim
 
 set rtp+=~/.vim/bundle/typescript-vim
 autocmd BufNewFile,BufRead *.ts,*.tsx setlocal filetype=typescript
