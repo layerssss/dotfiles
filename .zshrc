@@ -24,12 +24,13 @@ retry () {
 
 try_clone() {
   repo=$1
-  shift
-  target=$1
+  target=$2
+  head=${3:-master}
+  
   if [ ! -d $target ]
   then
     echo Installing $repo...
-    git clone --depth=1 $repo $target
+    git clone --depth=1 $repo $target -b $head
     echo Done.
   fi
 }
@@ -161,7 +162,7 @@ try_clone https://github.com/skammer/vim-css-color.git ~/.vim/bundle/vim-css-col
 try_clone https://github.com/hail2u/vim-css3-syntax.git ~/.vim/bundle/vim-css3-syntax
 try_clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 try_clone https://github.com/ngmy/vim-rubocop.git ~/.vim/bundle/vim-rubocop
-try_clone https://github.com/vim-syntastic/syntastic.git ~/.vim/bundle/syntastic
+try_clone https://github.com/vim-syntastic/syntastic.git ~/.vim/bundle/syntastic 3.8.0
 try_clone https://github.com/tpope/vim-sleuth.git ~/.vim/bundle/vim-sleuth
 try_clone https://github.com/Shougo/neocomplete.vim.git ~/.vim/bundle/neocomplete
 try_clone https://github.com/tpope/vim-fugitive ~/.vim/bundle/vim-fugitive
