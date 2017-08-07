@@ -1,9 +1,9 @@
 setopt null_glob
 command_exists () {
-    type "$1" &> /dev/null ;
+  type "$1" &> /dev/null ;
 }
 nobodydo () {
-    sudo -u nobody $@
+  sudo -u nobody $@
 }
 
 retry () {
@@ -26,7 +26,7 @@ try_clone() {
   repo=$1
   target=$2
   head=${3:-master}
-  
+
   if [ ! -d $target ]
   then
     echo Installing $repo...
@@ -36,9 +36,9 @@ try_clone() {
 }
 
 function join() {
-	local IFS=$1
-	shift
-	echo "$*"
+  local IFS=$1
+  shift
+  echo "$*"
 }
 
 try_clone https://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
@@ -123,6 +123,28 @@ then
   . ~/.nvm/nvm.sh
 fi
 
+# place this after nvm initialization!
+autoload -U add-zsh-hook
+load-nvmrc() {
+local node_version="$(nvm version)"
+local nvmrc_path="$(nvm_find_nvmrc)"
+
+if [ -n "$nvmrc_path" ]; then
+  local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+  if [ "$nvmrc_node_version" = "N/A" ]; then
+    nvm install
+  elif [ "$nvmrc_node_version" != "$node_version" ]; then
+    nvm use
+  fi
+elif [ "$node_version" != "$(nvm version default)" ]; then
+  echo "Reverting to nvm default version"
+  nvm use default
+fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+
 if [ -f ~/.env ]
 then
   . ~/.env
@@ -152,7 +174,7 @@ then
   tar -xzf js-beautify.tar.gz
   " | zsh
 fi
-  
+
 try_clone https://github.com/Quramy/tsuquyomi.git ~/.vim/bundle/tsuquyomi
 try_clone https://github.com/Chiel92/vim-autoformat.git ~/.vim/bundle/vim-autoformat
 try_clone https://github.com/Quramy/vim-js-pretty-template ~/.vim/bundle/vim-js-pretty-template
