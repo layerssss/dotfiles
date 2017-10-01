@@ -1,5 +1,6 @@
 set nocompatible
 set backupcopy=yes
+filetype off
 
 noremap <Up> <NOP>
 noremap <Down> <NOP>
@@ -7,9 +8,6 @@ noremap <Left> <NOP>
 noremap <Right> <NOP>
 
 let mapleader= ","
-syntax on
-
-filetype plugin indent on
 
 set backspace=indent,eol,start
 
@@ -95,3 +93,6 @@ set rtp+=~/.vim/bundle/vim-fugitive
 set rtp+=~/.vim/bundle/vim-coffee-script
 set rtp+=~/.vim/bundle/vim-es6
 set rtp+=~/.vim/bundle/vim-pug
+
+syntax on
+filetype plugin indent on
