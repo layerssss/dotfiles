@@ -94,3 +94,4 @@ let g:neocomplete#enable_smart_case = 1
 set rtp+=~/.vim/bundle/vim-fugitive
 set rtp+=~/.vim/bundle/vim-coffee-script
 set rtp+=~/.vim/bundle/vim-es6
+set rtp+=~/.vim/bundle/vim-pug
