@@ -176,7 +176,7 @@ then
 fi
 
 try_clone https://github.com/Quramy/tsuquyomi.git ~/.vim/bundle/tsuquyomi
-try_clone https://github.com/Chiel92/vim-autoformat.git ~/.vim/bundle/vim-autoformat
+try_clone https://github.com/sbdchd/neoformat ~/.vim/bundle/neoformat
 try_clone https://github.com/Quramy/vim-js-pretty-template ~/.vim/bundle/vim-js-pretty-template
 try_clone https://github.com/mattn/emmet-vim.git ~/.vim/bundle/emmet-vim
 try_clone https://github.com/groenewege/vim-less.git ~/.vim/bundle/vim-less

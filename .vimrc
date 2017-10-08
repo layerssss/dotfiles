@@ -48,13 +48,12 @@ set rtp+=~/.vim/bundle/typescript-vim
 autocmd BufNewFile,BufRead *.ts,*.tsx setlocal filetype=typescript
 set rtp+=~/.vim/bundle/vimproc.vim
 set rtp+=~/.vim/bundle/tsuquyomi
-set rtp+=~/.vim/bundle/vim-autoformat
 
-noremap <Leader>f :Autoformat<CR>
+set rtp+=~/.vim/bundle/neoformat
+noremap <Leader>f :Neoformat<CR>
+let g:neoformat_enabled_javascript = ['prettier', 'js-beautify']
 
-set rtp+=~/.vim/bundle/vim-js-pretty-template
 set rtp+=~/.vim/bundle/emmet-vim
-
 set rtp+=~/.vim/bundle/vim-less
 set rtp+=~/.vim/bundle/vim-css-color
 set rtp+=~/.vim/bundle/vim-css3-syntax
