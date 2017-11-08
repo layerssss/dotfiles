@@ -96,5 +96,11 @@ set rtp+=~/.vim/bundle/vim-coffee-script
 set rtp+=~/.vim/bundle/vim-es6
 set rtp+=~/.vim/bundle/vim-pug
 
+set rtp+=~/.vim/bundle/nerdcommenter
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
 syntax on
 filetype plugin indent on

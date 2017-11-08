@@ -190,6 +190,8 @@ try_clone https://github.com/Shougo/neocomplete.vim.git ~/.vim/bundle/neocomplet
 try_clone https://github.com/tpope/vim-fugitive ~/.vim/bundle/vim-fugitive
 try_clone https://github.com/isRuslan/vim-es6.git ~/.vim/bundle/vim-es6
 try_clone https://github.com/digitaltoad/vim-pug.git ~/.vim/bundle/vim-pug
+try_clone https://github.com/scrooloose/nerdcommenter.git ~/.vim/bundle/nerdcommenter
+
 
 export PLATFORM=$(uname -s)
 export PLATFORM=$PLATFORM:l
