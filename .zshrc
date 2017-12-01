@@ -204,6 +204,7 @@ chmod 0755 ~/.bins/dropbox/* ~/.bins.${PLATFORM}/dropbox/*
 export PATH=$(join ':' ~/.bins.${PLATFORM}/*):$(join ':' ~/.bins/*):$PATH
 export PATH=~/.bin.${PLATFORM}:~/.bin:$PATH
 export PATH="bin.${PLATFORM}:bin:$PATH"
+export PATH="$HOME/.yarn/bin:$PATH"
 
 
 export BUNDLE_JOBS=$(getconf _NPROCESSORS_ONLN)
