@@ -191,7 +191,7 @@ try_clone https://github.com/tpope/vim-fugitive ~/.vim/bundle/vim-fugitive
 try_clone https://github.com/isRuslan/vim-es6.git ~/.vim/bundle/vim-es6
 try_clone https://github.com/digitaltoad/vim-pug.git ~/.vim/bundle/vim-pug
 try_clone https://github.com/scrooloose/nerdcommenter.git ~/.vim/bundle/nerdcommenter
-
+try_clone https://github.com/editorconfig/editorconfig-vim ~/.vim/bundle/editorconfig-vim
 
 export PLATFORM=$(uname -s)
 export PLATFORM=$PLATFORM:l

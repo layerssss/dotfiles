@@ -98,6 +98,10 @@ set rtp+=~/.vim/bundle/vim-coffee-script
 set rtp+=~/.vim/bundle/vim-es6
 set rtp+=~/.vim/bundle/vim-pug
 
+set rtp+=~/.vim/bundle/editorconfig-vim
+
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
 set rtp+=~/.vim/bundle/nerdcommenter
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
