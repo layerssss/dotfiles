@@ -109,5 +109,8 @@ let g:NERDSpaceDelims = 1
 " Allow commenting and inverting empty lines (useful when commenting a region)
 let g:NERDCommentEmptyLines = 1
 
+set rtp+=~/.vim/bundle/matchit
+source ~/.vim/bundle/matchit/plugin/matchit.vim
+
 syntax on
 filetype plugin indent on
