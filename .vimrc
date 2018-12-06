@@ -55,8 +55,9 @@ set rtp+=~/.vim/bundle/tsuquyomi
 
 set rtp+=~/.vim/bundle/neoformat
 noremap <Leader>f :Neoformat<CR>
-let g:neoformat_enabled_javascript = ['prettier', 'js-beautify']
-let g:neoformat_enabled_json = ['prettier', 'js-beautify']
+let g:neoformat_enabled_javascript = ['prettier', 'jsbeautify']
+let g:neoformat_enabled_json = ['prettier', 'jsbeautify']
+let g:neoformat_enabled_html = ['htmlbeautify']
 
 set rtp+=~/.vim/bundle/emmet-vim
 set rtp+=~/.vim/bundle/vim-less
