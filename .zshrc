@@ -42,7 +42,7 @@ join() {
 }
 
 tworkspaces_start() {
-  for workspace_path in $HOME/.tmux_workspaces/*
+  for workspace_path in $HOME/.tworkspaces/*
   do
     if [ -d $workspace_path ]
     then
@@ -66,7 +66,7 @@ tworkspaces_link() {
   then
     echo "Usage tworkspaces_link PATH [NAME]"
   else
-    ln -sf "${workspace_path}" "$HOME/.tmux_workspaces/${workspace_name}"
+    ln -sf "${workspace_path}" "$HOME/.tworkspaces/${workspace_name}"
     echo "linked: ${workspace_name}(${workspace_path})"
   fi
 }
