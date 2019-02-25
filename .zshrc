@@ -41,6 +41,24 @@ function join() {
   echo "$*"
 }
 
+start_tmux_workspaces() {
+  for f in $HOME/.tmux_workspaces/*
+  do
+    if [ -d $f ]
+    then
+      session_name=${f##*/}
+      if tmux has-session -t "${session_name}" &> /dev/null
+      then
+      else
+        (
+          cd "${f}"
+          tmux new-session -d -n "${session_name}" -s "${session_name}"
+        )
+      fi
+    fi
+  done
+}
+
 try_clone https://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
 
 # Path to your oh-my-zsh configuration.
