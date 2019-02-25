@@ -35,28 +35,40 @@ try_clone() {
   fi
 }
 
-function join() {
+join() {
   local IFS=$1
   shift
   echo "$*"
 }
 
-start_tmux_workspaces() {
-  for f in $HOME/.tmux_workspaces/*
+tworkspaces_start() {
+  for workspace_path in $HOME/.tmux_workspaces/*
   do
-    if [ -d $f ]
+    if [ -d $workspace_path ]
     then
-      session_name=${f##*/}
-      if tmux has-session -t "${session_name}" &> /dev/null
+      workspace_name=${workspace_path##*/}
+      if tmux has-session -t "${workspace_name}" &> /dev/null
       then
       else
         (
-          cd "${f}"
-          tmux new-session -d -n "${session_name}" -s "${session_name}"
+          cd "${workspace_path}"
+          tmux new-session -d -n "${workspace_name}" -s "${workspace_name}"
         )
       fi
     fi
   done
+}
+
+tworkspaces_link() {
+  workspace_path=$1
+  workspace_name=${2:-"${workspace_path##*/}"}
+  if [ -z "${workspace_path}" ]
+  then
+    echo "Usage tworkspaces_link PATH [NAME]"
+  else
+    ln -sf "${workspace_path}" "$HOME/.tmux_workspaces/${workspace_name}"
+    echo "linked: ${workspace_name}(${workspace_path})"
+  fi
 }
 
 try_clone https://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
