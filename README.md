@@ -22,6 +22,6 @@ sudo apt-get install rbenv zsh tmux vim-nox git build-essential \
 
 ```
 curl -L https://github.com/layerssss/dotfiles/raw/master/bootstrap | zsh \
-  && rbenv install 2.4.1 && rbenv global 2.4.1 \
-  && nvm install 8 && nvm alias default 8
+  && rbenv install 2.5.3 && rbenv global 2.5.3 \
+  && nvm install 10 && nvm alias default 10
 ```
