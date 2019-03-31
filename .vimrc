@@ -46,6 +46,8 @@ augroup BWCCreateDir
 augroup END
 
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+let g:ctrlp_cmd = 'CtrlPMRU'
+let g:ctrlp_working_path_mode = 'c'
 set rtp+=~/.vim/bundle/ctrlp.vim
 
 set rtp+=~/.vim/bundle/typescript-vim
