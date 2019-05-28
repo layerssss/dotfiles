@@ -113,6 +113,7 @@ let g:NERDCommentEmptyLines = 1
 
 set rtp+=~/.vim/bundle/matchit
 source ~/.vim/bundle/matchit/plugin/matchit.vim
+set rtp+=~/.vim/bundle/readline
 
 syntax on
 filetype plugin indent on
