@@ -224,6 +224,7 @@ try_clone https://github.com/scrooloose/nerdcommenter.git ~/.vim/bundle/nerdcomm
 try_clone https://github.com/editorconfig/editorconfig-vim ~/.vim/bundle/editorconfig-vim
 try_clone https://github.com/vim-scripts/matchit.zip.git ~/.vim/bundle/matchit
 try_clone https://github.com/ryvnf/readline.vim.git ~/.vim/bundle/readline
+try_clone https://github.com/yaymukund/vim-rabl.git ~/.vim/bundle/vim-rabl
 
 export PLATFORM=$(uname -s)
 export PLATFORM=$PLATFORM:l
