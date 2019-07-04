@@ -42,8 +42,9 @@ join() {
 }
 
 tworkspaces_start() {
-  for workspace_path in $HOME/.tworkspaces/*
+  for workspace_link in $HOME/.tworkspaces/*
   do
+    workspace_path=$(readlink $workspace_link)
     if [ -d $workspace_path ]
     then
       workspace_name=${workspace_path##*/}
