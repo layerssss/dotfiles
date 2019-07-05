@@ -45,9 +45,9 @@ tworkspaces_start() {
   for workspace_link in $HOME/.tworkspaces/*
   do
     workspace_path=$(readlink $workspace_link)
+    workspace_name=${workspace_link##*/}
     if [ -d $workspace_path ]
     then
-      workspace_name=${workspace_path##*/}
       if tmux has-session -t "${workspace_name}" &> /dev/null
       then
       else
