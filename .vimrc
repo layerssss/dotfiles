@@ -37,6 +37,9 @@ autocmd BufNewFile,BufRead *.iced set filetype=coffee
 autocmd BufNewFile,BufRead .babelrc set filetype=json
 autocmd BufNewFile,BufRead .eslintrc set filetype=json
 autocmd BufNewFile,BufRead .prettierrc set filetype=json
+autocmd BufNewFile,BufRead *.gql set filetype=graphql
+autocmd BufNewFile,BufRead *.prisma set filetype=graphql
+autocmd BufNewFile,BufRead *.graphql set filetype=graphql
 
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 
