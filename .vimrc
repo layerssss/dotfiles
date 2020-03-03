@@ -65,6 +65,17 @@ let g:neoformat_enabled_json = ['prettier', 'jsbeautify']
 let g:neoformat_enabled_html = ['htmlbeautify']
 
 set rtp+=~/.vim/bundle/emmet-vim
+let g:user_emmet_settings={
+\  'javascript' : {
+\    'extends': 'jsx',
+\    'default_attributes': {
+\      'label': [{'htmlFor': ''}],
+\      'class': {'className': ''},
+\    }
+\  },
+\}
+autocmd FileType html,css,javascript,jsx EmmetInstall
+
 set rtp+=~/.vim/bundle/vim-less
 set rtp+=~/.vim/bundle/vim-css-color
 set rtp+=~/.vim/bundle/vim-css3-syntax
