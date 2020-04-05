@@ -121,27 +121,19 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR=vim
 
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-export PATH="/usr/local/opt/ruby/bin:/usr/local/bin:/usr/local/sbin:$PATH"
-
 alias npm="noglob npm"
 alias bower="noglob bower"
+
+# git aliases
 alias gprune="git remote prune origin && git branch -r | awk '{print \$1}' | egrep -v -f /dev/fd/0 <(git branch -vv) | awk '{print \$1}' | xargs git branch -d"
 
+# rbenv
 export PATH=".rbenv/bin:$PATH"
 export RBENV_ROOT=~/.rbenv
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-alias gprelease="git push -f origin HEAD:release"
-alias gpfr="git fetch origin && git push -f origin origin/master:release"
-alias gcap!="git commit --all --amend --reuse-message HEAD && git push -f"
-alias gfhrm="git fetch origin && git reset --hard origin/master"
-alias upplib="(bundle update plib --source plib > /dev/null && gca -m 'updated plib') || true"
-
+# nvm
 export NVM_DIR=~/.nvm
 
 if command_exists brew
@@ -157,21 +149,21 @@ fi
 # place this after nvm initialization!
 autoload -U add-zsh-hook
 load-nvmrc() {
-local node_version="$(nvm version)"
-local nvmrc_path="$(nvm_find_nvmrc)"
+  local node_version="$(nvm version)"
+  local nvmrc_path="$(nvm_find_nvmrc)"
 
-if [ -n "$nvmrc_path" ]; then
-  local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
 
-  if [ "$nvmrc_node_version" = "N/A" ]; then
-    nvm install
-  elif [ "$nvmrc_node_version" != "$node_version" ]; then
-    nvm use
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+      nvm use
+    fi
+  elif [ "$node_version" != "$(nvm version default)" ]; then
+    echo "Reverting to nvm default version"
+    nvm use default
   fi
-elif [ "$node_version" != "$(nvm version default)" ]; then
-  echo "Reverting to nvm default version"
-  nvm use default
-fi
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
@@ -182,6 +174,7 @@ then
 fi
 
 
+# load vim stuff
 mkdir -p ~/.vimswap
 
 try_clone https://github.com/kien/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim
@@ -230,15 +223,16 @@ try_clone https://github.com/yaymukund/vim-rabl.git ~/.vim/bundle/vim-rabl
 export PLATFORM=$(uname -s)
 export PLATFORM=$PLATFORM:l
 
-export PATH=~/.local/bin:$PATH
 
 find ~/Dropbox/credentials -type f -exec chmod 0600 {} \;
 chmod 0755 ~/.bins/dropbox/* ~/.bins.${PLATFORM}/dropbox/*
 
+export PATH="$HOME/.yarn/bin:$PATH"
+export PATH=~/.local/bin:$PATH
+
 export PATH=$(join ':' ~/.bins.${PLATFORM}/*):$(join ':' ~/.bins/*):$PATH
 export PATH=~/.bin.${PLATFORM}:~/.bin:$PATH
 export PATH="bin.${PLATFORM}:bin:$PATH"
-export PATH="$HOME/.yarn/bin:$PATH"
 
 export GIT_AUTHOR_NAME="${GIT_AUTHOR_NAME:-$NAME}"
 export GIT_COMMITTER_NAME="${GIT_COMMITTER_NAME:-$NAME}"
