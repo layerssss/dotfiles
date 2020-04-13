@@ -11,6 +11,7 @@ brew install zsh tmux vim git nvm rbenv ruby-build
 # prepare for Ubuntu / Debian
 
 ```
+mkdir -p ~/ownCloud
 touch ~/.owncloud.exclude
 ```
 
