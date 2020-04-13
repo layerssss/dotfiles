@@ -224,8 +224,8 @@ export PLATFORM=$(uname -s)
 export PLATFORM=$PLATFORM:l
 
 
-find ~/Dropbox/credentials -type f -exec chmod 0600 {} \;
-chmod 0755 ~/.bins/dropbox/* ~/.bins.${PLATFORM}/dropbox/*
+find ~/ownCloud/credentials -type f -exec chmod 0600 {} \;
+chmod 0755 ~/.bins/ownCloud/* ~/.bins.${PLATFORM}/ownCloud/*
 
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH=~/.local/bin:$PATH
