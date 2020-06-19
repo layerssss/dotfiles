@@ -34,6 +34,7 @@ set showmatch
 autocmd BufWritePre *.pl %s/\s\+$//e
 
 autocmd BufNewFile,BufRead *.jbuilder set filetype=ruby
+autocmd BufNewFile,BufRead *.axlsx set filetype=ruby
 autocmd BufNewFile,BufRead *.iced set filetype=coffee
 autocmd BufNewFile,BufRead .babelrc set filetype=json
 autocmd BufNewFile,BufRead .eslintrc set filetype=json
