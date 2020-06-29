@@ -168,11 +168,6 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
-if [ -f ~/.env ]
-then
-  . ~/.env
-fi
-
 
 # load vim stuff
 mkdir -p ~/.vimswap
@@ -223,7 +218,6 @@ try_clone https://github.com/yaymukund/vim-rabl.git ~/.vim/bundle/vim-rabl
 export PLATFORM=$(uname -s)
 export PLATFORM=$PLATFORM:l
 
-
 find ~/ownCloud/credentials -type f -exec chmod 0600 {} \;
 chmod 0755 ~/.bins/ownCloud/* ~/.bins.${PLATFORM}/ownCloud/*
 
@@ -240,3 +234,9 @@ export GIT_AUTHOR_EMAIL="${GIT_AUTHOR_EMAIL:-$EMAIL}"
 export GIT_COMMITTER_EMAIL="${GIT_COMMITTER_EMAIL:-$EMAIL}"
 
 export BUNDLE_JOBS=$(getconf _NPROCESSORS_ONLN)
+
+if [ -f ~/.env ]
+then
+  . ~/.env
+fi
+
