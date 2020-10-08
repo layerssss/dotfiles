@@ -18,4 +18,4 @@ echo Done.
 source ~/.zshrc
 echo Loaded.
 
-upgrade_oh_my_zsh
+omz update
