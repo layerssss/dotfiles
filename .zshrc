@@ -126,6 +126,7 @@ alias bower="noglob bower"
 
 # git aliases
 alias gprune="git remote prune origin && git branch -r | awk '{print \$1}' | egrep -v -f /dev/fd/0 <(git branch -vv) | awk '{print \$1}' | xargs git branch -d"
+alias gbdeleteall="echo Deleting all branches, press Enter to continue. && read && git branch | xargs git branch -D"
 
 # rbenv
 export PATH=".rbenv/bin:$PATH"
