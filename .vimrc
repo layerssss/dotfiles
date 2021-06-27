@@ -63,8 +63,7 @@ set rtp+=~/.vim/bundle/tsuquyomi
 set rtp+=~/.vim/bundle/neoformat
 noremap <Leader>f :Neoformat<CR>
 let g:neoformat_enabled_javascript = ['prettier']
-let g:neoformat_enabled_json = ['prettier', 'jsbeautify']
-let g:neoformat_enabled_html = ['htmlbeautify']
+let g:neoformat_enabled_json = ['prettier']
 
 set rtp+=~/.vim/bundle/emmet-vim
 let g:user_emmet_settings={

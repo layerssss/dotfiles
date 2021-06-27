@@ -187,14 +187,6 @@ then
   " | zsh
 fi
 
-if [ ! -d ~/.bin/node_modules/js-beautify ]
-then
-  echo "
-  cd ~/.bin/node_modules
-  tar -xzf js-beautify.tar.gz
-  " | zsh
-fi
-
 try_clone https://github.com/Quramy/tsuquyomi.git ~/.vim/bundle/tsuquyomi
 try_clone https://github.com/sbdchd/neoformat ~/.vim/bundle/neoformat
 try_clone https://github.com/Quramy/vim-js-pretty-template ~/.vim/bundle/vim-js-pretty-template
