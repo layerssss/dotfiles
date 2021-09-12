@@ -130,8 +130,8 @@ set rtp+=~/.vim/bundle/matchit
 source ~/.vim/bundle/matchit/plugin/matchit.vim
 set rtp+=~/.vim/bundle/readline
 set rtp+=~/.vim/bundle/vim-rabl
-
 set rtp+=~/.vim/bundle/Dockerfile
+set rtp+=~/.vim/bundle/vim-go
 
 syntax on
 filetype plugin indent on

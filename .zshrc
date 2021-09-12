@@ -208,6 +208,7 @@ try_clone https://github.com/vim-scripts/matchit.zip.git ~/.vim/bundle/matchit
 try_clone https://github.com/ryvnf/readline.vim.git ~/.vim/bundle/readline
 try_clone https://github.com/yaymukund/vim-rabl.git ~/.vim/bundle/vim-rabl
 try_clone https://github.com/ekalinin/Dockerfile.vim.git ~/.vim/bundle/Dockerfile
+try_clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
 
 export PLATFORM=$(uname -s)
 export PLATFORM=$PLATFORM:l
