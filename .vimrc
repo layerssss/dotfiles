@@ -92,6 +92,7 @@ let g:syntastic_ruby_checkers          = ['rubocop', 'mri']
 let g:syntastic_ruby_rubocop_exec      = '`which rubocop`'
 let g:syntastic_haml_checkers = ['haml_lint']
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_go_checkers = ['go']
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
