@@ -92,7 +92,8 @@ let g:syntastic_ruby_checkers          = ['rubocop', 'mri']
 let g:syntastic_ruby_rubocop_exec      = '`which rubocop`'
 let g:syntastic_haml_checkers = ['haml_lint']
 let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_go_checkers = ['go']
+let g:syntastic_go_checkers = ['golint', 'govet', 'gometalinter', 'gofmt']
+let g:syntastic_go_gometalinter_args = ['--disable-all', '--enable=errcheck']
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -132,7 +133,6 @@ source ~/.vim/bundle/matchit/plugin/matchit.vim
 set rtp+=~/.vim/bundle/readline
 set rtp+=~/.vim/bundle/vim-rabl
 set rtp+=~/.vim/bundle/Dockerfile
-set rtp+=~/.vim/bundle/vim-go
 
 syntax on
 filetype plugin indent on
