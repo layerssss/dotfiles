@@ -59,7 +59,9 @@ set rtp+=~/.vim/bundle/typescript-vim
 autocmd BufNewFile,BufRead *.ts,*.tsx setlocal filetype=typescript
 set rtp+=~/.vim/bundle/vimproc.vim
 set rtp+=~/.vim/bundle/tsuquyomi
+
 set rtp+=~/.vim/bundle/vim-ember-hbs
+autocmd BufWritePre *.hbs setlocal nofixendofline
 
 set rtp+=~/.vim/bundle/neoformat
 noremap <Leader>f :Neoformat<CR>
