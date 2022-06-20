@@ -209,6 +209,7 @@ try_clone https://github.com/ryvnf/readline.vim.git ~/.vim/bundle/readline
 try_clone https://github.com/yaymukund/vim-rabl.git ~/.vim/bundle/vim-rabl
 try_clone https://github.com/ekalinin/Dockerfile.vim.git ~/.vim/bundle/Dockerfile
 try_clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
+try_clone https://github.com/joukevandermaas/vim-ember-hbs ~/.vim/bundle/vim-ember-hbs
 
 export PLATFORM=$(uname -s)
 export PLATFORM=$PLATFORM:l

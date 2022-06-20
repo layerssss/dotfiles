@@ -59,11 +59,13 @@ set rtp+=~/.vim/bundle/typescript-vim
 autocmd BufNewFile,BufRead *.ts,*.tsx setlocal filetype=typescript
 set rtp+=~/.vim/bundle/vimproc.vim
 set rtp+=~/.vim/bundle/tsuquyomi
+set rtp+=~/.vim/bundle/vim-ember-hbs
 
 set rtp+=~/.vim/bundle/neoformat
 noremap <Leader>f :Neoformat<CR>
 let g:neoformat_enabled_javascript = ['prettier']
 let g:neoformat_enabled_json = ['prettier']
+let g:neoformat_enabled_handlebars = ['prettier']
 
 set rtp+=~/.vim/bundle/emmet-vim
 let g:user_emmet_settings={
