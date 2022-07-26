@@ -140,3 +140,6 @@ set rtp+=~/.vim/bundle/Dockerfile
 
 syntax on
 filetype plugin indent on
+
+autocmd Syntax js,jsx,ruby,html setlocal foldmethod=syntax
+autocmd Syntax js,jsx,ruby,html normal zR
