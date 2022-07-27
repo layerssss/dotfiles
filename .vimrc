@@ -1,6 +1,5 @@
 set nocompatible
 set backupcopy=yes
-filetype off
 
 noremap <Up> <NOP>
 noremap <Down> <NOP>
@@ -16,8 +15,6 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set scrolloff=20
-set spell spelllang=en_nz
-set nospell
 
 set number
 set mouse=a
@@ -25,9 +22,6 @@ set showcmd
 
 set swapfile
 set dir=~/.vimswap
-
-set spell spelllang=en_us
-set nospell
 
 set showmatch
 
@@ -43,8 +37,6 @@ autocmd BufNewFile,BufRead *.gql set filetype=graphql
 autocmd BufNewFile,BufRead *.prisma set filetype=graphql
 autocmd BufNewFile,BufRead *.graphql set filetype=graphql
 
-let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
-
 augroup BWCCreateDir
     autocmd!
     autocmd BufWritePre * if expand("<afile>")!~#'^\w\+:/' && !isdirectory(expand("%:h")) | execute "silent! !mkdir -p ".shellescape(expand('%:h'), 1) | redraw! | endif
@@ -56,11 +48,11 @@ let g:ctrlp_cmd = 'CtrlPMixed'
 set rtp+=~/.vim/bundle/ctrlp.vim
 
 set rtp+=~/.vim/bundle/typescript-vim
-autocmd BufNewFile,BufRead *.ts,*.tsx setlocal filetype=typescript
 set rtp+=~/.vim/bundle/vimproc.vim
 set rtp+=~/.vim/bundle/tsuquyomi
 
 set rtp+=~/.vim/bundle/vim-ember-hbs
+" fix hbslint
 autocmd BufWritePre *.hbs setlocal nofixendofline
 
 set rtp+=~/.vim/bundle/neoformat
@@ -136,10 +128,7 @@ source ~/.vim/bundle/matchit/plugin/matchit.vim
 set rtp+=~/.vim/bundle/readline
 set rtp+=~/.vim/bundle/vim-rabl
 set rtp+=~/.vim/bundle/Dockerfile
-set rtp+=~/.vim/bundle/vim-javascript
+set rtp+=~/.vim/bundle/vim-jsx-improve
 
-syntax on
-filetype plugin indent on
-
-autocmd Syntax js,jsx,ruby,html setlocal foldmethod=syntax
-autocmd Syntax js,jsx,ruby,html normal zR
+autocmd Syntax javascript,jsx,ruby,html setlocal foldmethod=syntax
+autocmd Syntax javascript,jsx,ruby,html normal zR
