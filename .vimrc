@@ -119,7 +119,6 @@ let g:neocomplete#enable_smart_case = 1
 
 set rtp+=~/.vim/bundle/vim-fugitive
 set rtp+=~/.vim/bundle/vim-coffee-script
-set rtp+=~/.vim/bundle/vim-es6
 set rtp+=~/.vim/bundle/vim-pug
 
 set rtp+=~/.vim/bundle/editorconfig-vim
@@ -137,6 +136,7 @@ source ~/.vim/bundle/matchit/plugin/matchit.vim
 set rtp+=~/.vim/bundle/readline
 set rtp+=~/.vim/bundle/vim-rabl
 set rtp+=~/.vim/bundle/Dockerfile
+set rtp+=~/.vim/bundle/vim-javascript
 
 syntax on
 filetype plugin indent on
