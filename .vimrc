@@ -80,9 +80,6 @@ set rtp+=~/.vim/bundle/vim-css3-syntax
 set rtp+=~/.vim/bundle/nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
-set rtp+=~/.vim/bundle/vim-rubocop
-noremap <Leader>r :RuboCop<CR>
-
 set rtp+=~/.vim/bundle/syntastic
 let g:syntastic_ruby_checkers          = ['rubocop', 'mri']
 let g:syntastic_ruby_rubocop_exec      = '`which rubocop`'
@@ -129,6 +126,13 @@ set rtp+=~/.vim/bundle/readline
 set rtp+=~/.vim/bundle/vim-rabl
 set rtp+=~/.vim/bundle/Dockerfile
 set rtp+=~/.vim/bundle/vim-jsx-improve
+
+set rtp+=~/.vim/bundle/vim-rspec
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
 
 autocmd Syntax javascript,jsx,ruby,html setlocal foldmethod=syntax
 autocmd Syntax javascript,jsx,ruby,html normal zR

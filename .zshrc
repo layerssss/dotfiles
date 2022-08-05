@@ -195,7 +195,6 @@ try_clone https://github.com/groenewege/vim-less.git ~/.vim/bundle/vim-less
 try_clone https://github.com/skammer/vim-css-color.git ~/.vim/bundle/vim-css-color
 try_clone https://github.com/hail2u/vim-css3-syntax.git ~/.vim/bundle/vim-css3-syntax
 try_clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
-try_clone https://github.com/ngmy/vim-rubocop.git ~/.vim/bundle/vim-rubocop
 try_clone https://github.com/vim-syntastic/syntastic.git ~/.vim/bundle/syntastic 3.8.0
 try_clone https://github.com/tpope/vim-sleuth.git ~/.vim/bundle/vim-sleuth
 try_clone https://github.com/Shougo/neocomplete.vim.git ~/.vim/bundle/neocomplete
@@ -210,6 +209,7 @@ try_clone https://github.com/ekalinin/Dockerfile.vim.git ~/.vim/bundle/Dockerfil
 try_clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
 try_clone https://github.com/joukevandermaas/vim-ember-hbs ~/.vim/bundle/vim-ember-hbs
 try_clone https://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javascript
+try_clone https://github.com/thoughtbot/vim-rspec.git ~/.vim/bundle/vim-rspec
 
 export PLATFORM=$(uname -s)
 export PLATFORM=$PLATFORM:l
