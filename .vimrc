@@ -44,6 +44,11 @@ augroup BWCCreateDir
     autocmd BufWritePre * if expand("<afile>")!~#'^\w\+:/' && !isdirectory(expand("%:h")) | execute "silent! !mkdir -p ".shellescape(expand('%:h'), 1) | redraw! | endif
 augroup END
 
+" rpc
+set rtp+=~/.vim/bundle/nvim-yarp
+set rtp+=~/.vim/bundle/vim-hug-neovim-rpc
+
+" ctrlp
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_cmd = 'CtrlPMixed'
@@ -100,13 +105,8 @@ let g:syntastic_check_on_wq = 0
 
 set rtp+=~/.vim/bundle/vim-sleuth
 
-set rtp+=~/.vim/bundle/neocomplete
-" Disable AutoComplPop.
-let g:acp_enableAtStartup = 0
-" Use neocomplete.
-let g:neocomplete#enable_at_startup = 1
-" Use smartcase.
-let g:neocomplete#enable_smart_case = 1
+set rtp+=~/.vim/bundle/deoplete
+let g:deoplete#enable_at_startup = 1
 
 set rtp+=~/.vim/bundle/vim-fugitive
 set rtp+=~/.vim/bundle/vim-coffee-script

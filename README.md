@@ -16,7 +16,7 @@ touch ~/.owncloud.exclude
 ```
 
 ```
-sudo apt-get install rbenv zsh tmux vim-nox git build-essential owncloud-client-cmd \
+sudo apt-get install rbenv zsh tmux vim-nox git build-essential owncloud-client-cmd python3-pynvim \
   && if [ ! -d "$(rbenv root)/plugins/ruby-build" ]; then; git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build; fi \
   && curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash \
   && owncloudcmd --exclude ~/.owncloud.exclude --user layerssss ~/ownCloud https://owncloud.micy.in/
