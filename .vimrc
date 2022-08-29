@@ -44,6 +44,9 @@ augroup BWCCreateDir
     autocmd BufWritePre * if expand("<afile>")!~#'^\w\+:/' && !isdirectory(expand("%:h")) | execute "silent! !mkdir -p ".shellescape(expand('%:h'), 1) | redraw! | endif
 augroup END
 
+" https://github.com/neovim/neovim/issues/14433
+let g:ftplugin_sql_omni_key = '<Nop>'
+
 " rpc
 set rtp+=~/.vim/bundle/nvim-yarp
 set rtp+=~/.vim/bundle/vim-hug-neovim-rpc
