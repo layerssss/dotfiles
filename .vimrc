@@ -1,6 +1,8 @@
 set nocompatible
 set backupcopy=yes
 
+filetype plugin on
+
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
