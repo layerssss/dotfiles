@@ -206,7 +206,7 @@ try_clone https://github.com/digitaltoad/vim-pug.git ~/.vim/bundle/vim-pug
 try_clone https://github.com/scrooloose/nerdcommenter.git ~/.vim/bundle/nerdcommenter
 try_clone https://github.com/editorconfig/editorconfig-vim ~/.vim/bundle/editorconfig-vim
 try_clone https://github.com/vim-scripts/matchit.zip.git ~/.vim/bundle/matchit
-try_clone https://github.com/ryvnf/readline.vim.git ~/.vim/bundle/readline master
+try_clone https://github.com/ryvnf/readline.vim.git ~/.vim/bundle/readline main
 try_clone https://github.com/yaymukund/vim-rabl.git ~/.vim/bundle/vim-rabl
 try_clone https://github.com/ekalinin/Dockerfile.vim.git ~/.vim/bundle/Dockerfile
 try_clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
