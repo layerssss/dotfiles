@@ -173,9 +173,6 @@ load-nvmrc
 # load vim stuff
 mkdir -p ~/.vimswap
 
-try_clone https://github.com/roxma/nvim-yarp.git ~/.vim/bundle/nvim-yarp
-try_clone https://github.com/roxma/vim-hug-neovim-rpc.git ~/.vim/bundle/vim-hug-neovim-rpc
-
 try_clone https://github.com/kien/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim
 try_clone https://github.com/octref/RootIgnore.git ~/.vim/bundle/RootIgnore
 try_clone https://github.com/kchmck/vim-coffee-script.git ~/.vim/bundle/vim-coffee-script/
@@ -200,7 +197,6 @@ try_clone https://github.com/hail2u/vim-css3-syntax.git ~/.vim/bundle/vim-css3-s
 try_clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 try_clone https://github.com/vim-syntastic/syntastic.git ~/.vim/bundle/syntastic 3.8.0
 try_clone https://github.com/tpope/vim-sleuth.git ~/.vim/bundle/vim-sleuth
-try_clone https://github.com/Shougo/deoplete.nvim.git ~/.vim/bundle/deoplete
 try_clone https://github.com/tpope/vim-fugitive ~/.vim/bundle/vim-fugitive
 try_clone https://github.com/digitaltoad/vim-pug.git ~/.vim/bundle/vim-pug
 try_clone https://github.com/scrooloose/nerdcommenter.git ~/.vim/bundle/nerdcommenter

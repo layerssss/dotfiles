@@ -47,10 +47,6 @@ augroup END
 " https://github.com/neovim/neovim/issues/14433
 let g:ftplugin_sql_omni_key = '<Nop>'
 
-" rpc
-set rtp+=~/.vim/bundle/nvim-yarp
-set rtp+=~/.vim/bundle/vim-hug-neovim-rpc
-
 " ctrlp
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 let g:ctrlp_working_path_mode = 'ra'
@@ -107,9 +103,6 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 set rtp+=~/.vim/bundle/vim-sleuth
-
-set rtp+=~/.vim/bundle/deoplete
-let g:deoplete#enable_at_startup = 1
 
 set rtp+=~/.vim/bundle/vim-fugitive
 set rtp+=~/.vim/bundle/vim-coffee-script
