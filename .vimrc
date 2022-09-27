@@ -38,6 +38,7 @@ autocmd BufNewFile,BufRead .prettierrc set filetype=json
 autocmd BufNewFile,BufRead *.gql set filetype=graphql
 autocmd BufNewFile,BufRead *.prisma set filetype=graphql
 autocmd BufNewFile,BufRead *.graphql set filetype=graphql
+autocmd BufNewFile,BufRead *.hbs set filetype=handlebars
 
 augroup BWCCreateDir
     autocmd!
@@ -58,8 +59,6 @@ set rtp+=~/.vim/bundle/vimproc.vim
 set rtp+=~/.vim/bundle/tsuquyomi
 
 set rtp+=~/.vim/bundle/vim-ember-hbs
-" fix hbslint
-autocmd BufWritePre *.hbs setlocal nofixendofline
 
 set rtp+=~/.vim/bundle/neoformat
 noremap <Leader>f :Neoformat<CR>
