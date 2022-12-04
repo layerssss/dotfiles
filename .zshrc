@@ -122,7 +122,6 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR=vim
 
 alias npm="noglob npm"
-alias bower="noglob bower"
 
 # git aliases
 alias gprune="git remote prune origin && git branch -r | awk '{print \$1}' | egrep -v -f /dev/fd/0 <(git branch -vv) | awk '{print \$1}' | xargs git branch -d"
@@ -169,60 +168,11 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
+export PATH="~/.local/bin:$PATH"
 
-# load vim stuff
-mkdir -p ~/.vimswap
-
-try_clone https://github.com/kien/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim
-try_clone https://github.com/octref/RootIgnore.git ~/.vim/bundle/RootIgnore
-try_clone https://github.com/kchmck/vim-coffee-script.git ~/.vim/bundle/vim-coffee-script/
-try_clone https://github.com/leafgarland/typescript-vim.git ~/.vim/bundle/typescript-vim
-try_clone https://github.com/Shougo/vimproc.vim.git ~/.vim/bundle/vimproc.vim
-vimproc_libs=`ls ~/.vim/bundle/vimproc.vim/lib | grep vimproc | grep .so`
-if [ -z $vimproc_libs ]
-then
-  echo "
-  cd ~/.vim/bundle/vimproc.vim
-  make
-  " | zsh
-fi
-
-try_clone https://github.com/Quramy/tsuquyomi.git ~/.vim/bundle/tsuquyomi
-try_clone https://github.com/sbdchd/neoformat ~/.vim/bundle/neoformat
-try_clone https://github.com/Quramy/vim-js-pretty-template ~/.vim/bundle/vim-js-pretty-template
-try_clone https://github.com/mattn/emmet-vim.git ~/.vim/bundle/emmet-vim
-try_clone https://github.com/groenewege/vim-less.git ~/.vim/bundle/vim-less
-try_clone https://github.com/skammer/vim-css-color.git ~/.vim/bundle/vim-css-color
-try_clone https://github.com/hail2u/vim-css3-syntax.git ~/.vim/bundle/vim-css3-syntax
-try_clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
-try_clone https://github.com/vim-syntastic/syntastic.git ~/.vim/bundle/syntastic 3.8.0
-try_clone https://github.com/tpope/vim-sleuth.git ~/.vim/bundle/vim-sleuth
-try_clone https://github.com/tpope/vim-fugitive ~/.vim/bundle/vim-fugitive
-try_clone https://github.com/digitaltoad/vim-pug.git ~/.vim/bundle/vim-pug
-try_clone https://github.com/scrooloose/nerdcommenter.git ~/.vim/bundle/nerdcommenter
-try_clone https://github.com/editorconfig/editorconfig-vim ~/.vim/bundle/editorconfig-vim
-try_clone https://github.com/vim-scripts/matchit.zip.git ~/.vim/bundle/matchit
-try_clone https://github.com/ryvnf/readline.vim.git ~/.vim/bundle/readline main
-try_clone https://github.com/yaymukund/vim-rabl.git ~/.vim/bundle/vim-rabl
-try_clone https://github.com/ekalinin/Dockerfile.vim.git ~/.vim/bundle/Dockerfile
-try_clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
-try_clone https://github.com/joukevandermaas/vim-ember-hbs ~/.vim/bundle/vim-ember-hbs
-try_clone https://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javascript
-try_clone https://github.com/thoughtbot/vim-rspec.git ~/.vim/bundle/vim-rspec
-
-export PLATFORM=$(uname -s)
-export PLATFORM=$PLATFORM:l
-
-find ~/ownCloud/credentials -type f -exec chmod 0600 {} \;
-chmod 0755 ~/.bins/ownCloud/* ~/.bins.${PLATFORM}/ownCloud/*
-
-export PATH="$HOME/.yarn/bin:$PATH"
-export PATH=~/.local/bin:$PATH
-
-export PATH=$(join ':' ~/.bins.${PLATFORM}/*):$(join ':' ~/.bins/*):$PATH
-export PATH=~/.bin.${PLATFORM}:~/.bin:$PATH
-export PATH="bin.${PLATFORM}:bin:$PATH"
-
+export PATH="$(join ':' ~/.bins/*):$PATH"
+export PATH="~/.bin:$PATH"
+export PATH="bin:$PATH"
 
 export BUNDLE_JOBS=$(getconf _NPROCESSORS_ONLN)
 
@@ -230,8 +180,3 @@ if [ -f ~/.env ]
 then
   . ~/.env
 fi
-
-export GIT_AUTHOR_NAME="${GIT_AUTHOR_NAME:-$NAME}"
-export GIT_COMMITTER_NAME="${GIT_COMMITTER_NAME:-$NAME}"
-export GIT_AUTHOR_EMAIL="${GIT_AUTHOR_EMAIL:-$EMAIL}"
-export GIT_COMMITTER_EMAIL="${GIT_COMMITTER_EMAIL:-$EMAIL}"
