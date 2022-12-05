@@ -127,9 +127,7 @@ alias gbdeleteall="echo Deleting all branches, press Enter to continue. && read 
 
 autoload -U add-zsh-hook
 
-export PATH="~/.local/bin:$PATH"
-
-export PATH="$(join ':' ~/.bins/*):$PATH"
+export PATH="$(join ':' ~/.bins/* $PATH)"
 export PATH="~/.bin:$PATH"
 export PATH="bin:$PATH"
 
