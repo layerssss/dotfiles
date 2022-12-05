@@ -4,12 +4,12 @@ Michael Yin's dotfiles
 # prepare for OSX
 
 ```
-brew install zsh tmux vim git nvm rbenv ruby-build
+brew install zsh vim git
 ```
 
 # prepare for Ubuntu / Debian
 ```
-sudo apt-get install rbenv zsh tmux vim-nox git build-essential
+sudo apt-get install zsh vim git build-essential
 ```
 
 # bootstrap
