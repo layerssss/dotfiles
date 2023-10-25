@@ -48,7 +48,7 @@ tworkspaces_start() {
     workspace_name=${workspace_link##*/}
     if [ -d $workspace_path ]
     then
-      if tmux has-session -t "${workspace_name}" &> /dev/null
+      if tmux has-session -t="${workspace_name}" &> /dev/null
       then
       else
         (
