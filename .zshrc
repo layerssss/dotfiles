@@ -116,6 +116,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git rails rake bundler)
+UNBUNDLED_COMMANDS=(solargraph rubocop pry)
 
 source $ZSH/oh-my-zsh.sh
 
