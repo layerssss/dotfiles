@@ -128,10 +128,6 @@ alias gbdeleteall="echo Deleting all branches, press Enter to continue. && read 
 
 autoload -U add-zsh-hook
 
-export PATH="$(join ':' ~/.bins/* $PATH)"
-export PATH="~/.bin:$PATH"
-export PATH="bin:$PATH"
-
 export BUNDLE_JOBS=$(getconf _NPROCESSORS_ONLN)
 
 if [ -f ~/.env ]
